@@ -19,6 +19,10 @@ public class EmployeeService {
 		emp.setEmployeeName("Sachin");
 		emp.setEmployeeSalery("10000");
 		empRepo.save(emp);
+		
+		
+		
+		
 	}
 
 }
