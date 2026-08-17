@@ -16,7 +16,7 @@ public class SpringWithJpaApplication {
 	public static void main(String[] args) {
 	ConfigurableApplicationContext ap=	SpringApplication.run(SpringWithJpaApplication.class, args);
 		
-	StudentService studentService=ap.getBean(StudentService.class);
+	//StudentService studentService=ap.getBean(StudentService.class);
 	 //studentService.saveStudent();
 	//studentService.getStudentById(1089);
 	
@@ -25,7 +25,12 @@ public class SpringWithJpaApplication {
 	
 	//studentService.getAllStudents();
 	//studentService.deleteByStudentsId(list);
-	studentService.getCount();
+	//studentService.getCount();
+	
+	EmployeeService employeeService=ap.getBean(EmployeeService.class);
+//	employeeService.findByName();
+	employeeService.getAllEmp();
+	
 	
 	}
 
