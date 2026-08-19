@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import com.example.demo.model.Product;
+import com.example.demo.service.DepartmentService;
 import com.example.demo.service.EmployeeService;
 import com.example.demo.service.ProductService;
 import com.example.demo.service.StudentService;
@@ -31,18 +32,23 @@ public class SpringWithJpaApplication {
 		// studentService.getCount();
 
 		// EmployeeService employeeService=ap.getBean(EmployeeService.class);
-		// employeeService.findByName();
-		// employeeService.getAllEmp();
+       //employeeService.findByName();
+	//	employeeService.getAllEmp();
 		// employeeService.getAllRecordBySorting();
 		// 0,4 1111
 		// 1,4
 		// employeeService.getAllRecordsPaged(1,3);
 
-		ProductService productService = ap.getBean(ProductService.class);
+		//ProductService productService = ap.getBean(ProductService.class);
 		// productService.saveProduct();
 
-		List<Product> products = productService.getProductBySpecification("onePlus", 7000.00, 3000.00);
-		System.out.println(products);
+		//List<Product> products = productService.getProductBySpecification("onePlus", 7000.00, 3000.00);
+		//System.out.println(products);
+		
+		DepartmentService departmentService=ap.getBean(DepartmentService.class);
+		
+	//	departmentService.saveDepartment();
+		departmentService.getDeptById(1);
 	}
 
 }

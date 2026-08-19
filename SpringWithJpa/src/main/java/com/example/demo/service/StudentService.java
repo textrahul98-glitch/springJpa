@@ -17,6 +17,7 @@ public class StudentService {
 
 	@Autowired
 	private StudentRepo sRepo;
+	
 
 	public void saveStudent() {
 		Student student1 = new Student(1006, "Satara", "Sachin");
