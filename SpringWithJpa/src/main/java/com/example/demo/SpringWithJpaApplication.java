@@ -9,8 +9,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import com.example.demo.model.Product;
+import com.example.demo.service.BankService;
 import com.example.demo.service.DepartmentService;
 import com.example.demo.service.EmployeeService;
+import com.example.demo.service.PersonService;
 import com.example.demo.service.ProductService;
 import com.example.demo.service.StudentService;
 
@@ -24,7 +26,7 @@ public class SpringWithJpaApplication {
 		// studentService.saveStudent();
 		// studentService.getStudentById(1089);
 
-		List<Integer> list = Arrays.asList(1003, 1004, 1005, 1006);
+		//List<Integer> list = Arrays.asList(1003, 1004, 1005, 1006);
 		// studentService.getStudents(list);
 
 		// studentService.getAllStudents();
@@ -33,7 +35,7 @@ public class SpringWithJpaApplication {
 
 		// EmployeeService employeeService=ap.getBean(EmployeeService.class);
        //employeeService.findByName();
-	//	employeeService.getAllEmp();
+	  //	employeeService.getAllEmp();
 		// employeeService.getAllRecordBySorting();
 		// 0,4 1111
 		// 1,4
@@ -45,10 +47,13 @@ public class SpringWithJpaApplication {
 		//List<Product> products = productService.getProductBySpecification("onePlus", 7000.00, 3000.00);
 		//System.out.println(products);
 		
-		DepartmentService departmentService=ap.getBean(DepartmentService.class);
+		//DepartmentService departmentService=ap.getBean(DepartmentService.class);
 		
-	//	departmentService.saveDepartment();
-		departmentService.getDeptById(1);
+	    //departmentService.saveDepartment();
+		//departmentService.getDeptById(1);
+		BankService bankService=ap.getBean(BankService.class);
+		
+		bankService.saveBankDetails();
 	}
 
 }
